@@ -1,0 +1,39 @@
+﻿{
+  "name": "Novikov Карусель",
+  "description": "Расставляет случайным образом оценки от 8 до 11 и 5 кристалов присуствующим",
+  "version": "1",
+  "manifest_version": 2,
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Карусель"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://logbook.itstep.org/*"
+      ],
+      "js": [
+        "jquery-3.3.1.min.js",
+        "myscript.js"
+      ]
+    }
+  ],
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "file://*/*",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
+
+
